@@ -16,5 +16,7 @@ public class SnailController
 
     public Transform GetTarget() => model.Target;
     public float GetFollowRange() => model.FollowRange;
+
+    public void TouchPlayer() => GameService.Instance.EndGame(false);
 }
 

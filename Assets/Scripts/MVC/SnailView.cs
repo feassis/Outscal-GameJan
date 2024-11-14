@@ -30,5 +30,13 @@ public class SnailView : MonoBehaviour
             agent.ResetPath();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.TryGetComponent<PlayerView>(out PlayerView playerView))
+        {
+            controller.TouchPlayer();
+        }
+    }
 }
 
